@@ -1,34 +1,45 @@
-Supplier Performance & Procurement Analytics using SAP HANA
+Below is the **properly formatted `README.md` code** (Markdown) that you can **directly paste into GitHub**.
+This is clean, structured, and recruiter-ready.
 
-A complete SAP HANA analytics project showcasing supplier reliability, delivery performance, and procurement spend analysis using SAP HANA SQL and SQLScript.
-This project reflects a real-world procurement analytics use case and is suitable for SAP Associate, Analyst, and SAP HANA roles.
+---
 
-Project Overview
+```md
+# Supplier Performance & Procurement Analytics using SAP HANA
 
-This project simulates a procurement system where supplier performance is evaluated based on delivery timeliness and cost efficiency.
-Using SAP HANA’s in-memory processing, analytical queries, views, and stored procedures are implemented to support data-driven procurement decisions.
+A complete **SAP HANA analytics project** showcasing supplier reliability, delivery performance, and procurement spend analysis using **SAP HANA SQL and SQLScript**.  
+This project represents a real-world procurement analytics use case and is suitable for **SAP Associate, Analyst, and SAP HANA roles**.
 
-Business Objectives
+---
 
-Analyze supplier delivery performance (on-time vs delayed)
+## Project Overview
 
-Track supplier-wise and monthly procurement spend
+This project simulates a procurement system where supplier performance is evaluated based on **delivery timeliness** and **cost efficiency**.  
+Using SAP HANA’s in-memory processing, analytical queries, views, and stored procedures are implemented to support **data-driven procurement decisions**.
 
-Rank suppliers based on performance score
+---
 
-Enable procurement optimization using analytics
+## Business Objectives
 
-Technology Stack
+- Analyze supplier delivery performance (on-time vs delayed)
+- Track supplier-wise and monthly procurement spend
+- Rank suppliers based on performance score
+- Enable procurement optimization using analytics
 
-SAP HANA SQL
+---
 
-SQLScript (Stored Procedures)
+## Technology Stack
 
-Analytical Views
+- SAP HANA SQL  
+- SQLScript (Stored Procedures)  
+- Analytical Views  
+- SAP HANA Studio / DB Explorer / SAP Cockpit  
 
-SAP HANA Studio / DB Explorer / SAP Cockpit
+---
 
-Repository Structure
+## Repository Structure
+
+```
+
 sap-hana-supplier-performance-analytics/
 ├── sql/
 │   ├── 01_create_tables.sql          # Table creation (DDL)
@@ -42,63 +53,94 @@ sap-hana-supplier-performance-analytics/
 │   └── README.md                     # Optional output screenshots
 └── README.md                         # Project documentation
 
-Data Model
-Tables Used
+````
 
-SUPPLIER
-Stores supplier master information
+---
 
-PURCHASE_ORDER
-Stores procurement order details and cost
+## Data Model
 
-DELIVERY
-Stores delivery dates and delivery status
+### Tables Used
 
-Key Features
+- **SUPPLIER**  
+  Stores supplier master information
 
-On-time delivery percentage calculation
+- **PURCHASE_ORDER**  
+  Stores procurement order details and cost
 
-Supplier-wise and monthly procurement spend analysis
+- **DELIVERY**  
+  Stores delivery dates and delivery status
 
-Analytical view for reporting and dashboards
+---
 
-SQLScript stored procedure to calculate supplier performance score
+## Key Features
 
-Supplier ranking based on delivery and cost efficiency
+- On-time delivery percentage calculation  
+- Supplier-wise and monthly procurement spend analysis  
+- Analytical view for reporting and dashboards  
+- SQLScript stored procedure to calculate supplier performance score  
+- Supplier ranking based on delivery and cost efficiency  
 
-Getting Started
-Step 1: Create Tables
+---
 
-Run:
+## Getting Started
 
+### Step 1: Create Tables
+```sql
 sql/01_create_tables.sql
+````
 
-Step 2: Insert Sample Data
+### Step 2: Insert Sample Data
+
+```sql
 sql/02_insert_data.sql
+```
 
-Step 3: Run Basic Queries
+### Step 3: Run Basic Queries
+
+```sql
 sql/03_basic_queries.sql
+```
 
-Step 4: Run Analytical Queries
+### Step 4: Run Analytical Queries
+
+```sql
 sql/04_analytics_queries.sql
+```
 
-Step 5: Create Analytical View
+### Step 5: Create Analytical View
+
+```sql
 views/supplier_performance_view.sql
+```
 
-Step 6: Execute Stored Procedure
+### Step 6: Execute Stored Procedure
+
+```sql
 CALL CALC_SUPPLIER_PERFORMANCE(?);
-
+```
 
 The procedure calculates supplier scores and ranks them based on performance.
 
-Output Metrics
+---
 
-On-time delivery percentage
+## Output Metrics
 
-Total procurement spend per supplier
+* On-time delivery percentage
+* Total procurement spend per supplier
+* Monthly procurement spend analysis
+* Supplier performance score
+* Supplier ranking
 
-Monthly spend analysis
 
-Supplier performance score
+---
 
-Supplier ranking
+## Future Enhancements
+
+* Integration with Power BI or SAP Analytics Cloud
+* SLA breach alerts and lead-time trend analysis
+* Dashboard visualizations using analytical views
+* Real-world or anonymized dataset integration
+
+---
+
+
