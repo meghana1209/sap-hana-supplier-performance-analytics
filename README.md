@@ -1,63 +1,104 @@
-# Supplier Performance & Procurement Analytics (SAP HANA)
+Supplier Performance & Procurement Analytics using SAP HANA
 
-Professional, recruiter-ready sample project demonstrating supplier reliability, delivery performance, and procurement spend analysis using SAP HANA SQL and SQLScript.
+A complete SAP HANA analytics project showcasing supplier reliability, delivery performance, and procurement spend analysis using SAP HANA SQL and SQLScript.
+This project reflects a real-world procurement analytics use case and is suitable for SAP Associate, Analyst, and SAP HANA roles.
 
-## Overview
-This repository models a procurement domain—suppliers, purchase orders and deliveries—and provides analytical queries, an aggregated view, and a stored procedure that computes supplier performance scores combining delivery timeliness and cost efficiency.
+Project Overview
 
-## Repository Structure
-```
+This project simulates a procurement system where supplier performance is evaluated based on delivery timeliness and cost efficiency.
+Using SAP HANA’s in-memory processing, analytical queries, views, and stored procedures are implemented to support data-driven procurement decisions.
+
+Business Objectives
+
+Analyze supplier delivery performance (on-time vs delayed)
+
+Track supplier-wise and monthly procurement spend
+
+Rank suppliers based on performance score
+
+Enable procurement optimization using analytics
+
+Technology Stack
+
+SAP HANA SQL
+
+SQLScript (Stored Procedures)
+
+Analytical Views
+
+SAP HANA Studio / DB Explorer / SAP Cockpit
+
+Repository Structure
 sap-hana-supplier-performance-analytics/
 ├── sql/
-│   ├── 01_create_tables.sql         # DDL: SUPPLIER, PURCHASE_ORDER, DELIVERY
-│   ├── 02_insert_data.sql           # Sample dataset (suppliers, POs, deliveries)
-│   ├── 03_basic_queries.sql         # Basic lookups and joins
-│   ├── 04_analytics_queries.sql     # On-time %, monthly spend, rankings
-│   └── 05_procedure.sql             # SQLScript: supplier performance procedure
+│   ├── 01_create_tables.sql          # Table creation (DDL)
+│   ├── 02_insert_data.sql            # Sample procurement data
+│   ├── 03_basic_queries.sql          # Basic joins and validations
+│   ├── 04_analytics_queries.sql      # KPIs, rankings, spend analysis
+│   └── 05_procedure.sql              # SQLScript performance procedure
 ├── views/
-│   └── supplier_performance_view.sql# Aggregated analytical view
+│   └── supplier_performance_view.sql # Aggregated analytical view
 ├── screenshots/
-│   └── README.md                    # Place screenshots here (optional)
-└── README.md                        # This file
-```
+│   └── README.md                     # Optional output screenshots
+└── README.md                         # Project documentation
 
-## Key Features
-- Supplier performance scoring (on-time vs delayed deliveries)
-- Supplier-level and monthly procurement spend reports
-- Analytical view `SUPPLIER_PERFORMANCE_VIEW` for dashboards
-- SQLScript stored procedure `CALC_SUPPLIER_PERFORMANCE` for ranking
+Data Model
+Tables Used
 
-## Getting Started (Quick)
-1. Execute the DDL: `sql/01_create_tables.sql` to create tables.
-2. Load sample data: `sql/02_insert_data.sql`.
-3. Run basic checks: `sql/03_basic_queries.sql`.
-4. Run analytics: `sql/04_analytics_queries.sql`.
-5. Create the view in `views/supplier_performance_view.sql`.
-6. Call the procedure to produce scores, for example:
+SUPPLIER
+Stores supplier master information
 
-```sql
--- Example (HANA SQLScript):
+PURCHASE_ORDER
+Stores procurement order details and cost
+
+DELIVERY
+Stores delivery dates and delivery status
+
+Key Features
+
+On-time delivery percentage calculation
+
+Supplier-wise and monthly procurement spend analysis
+
+Analytical view for reporting and dashboards
+
+SQLScript stored procedure to calculate supplier performance score
+
+Supplier ranking based on delivery and cost efficiency
+
+Getting Started
+Step 1: Create Tables
+
+Run:
+
+sql/01_create_tables.sql
+
+Step 2: Insert Sample Data
+sql/02_insert_data.sql
+
+Step 3: Run Basic Queries
+sql/03_basic_queries.sql
+
+Step 4: Run Analytical Queries
+sql/04_analytics_queries.sql
+
+Step 5: Create Analytical View
+views/supplier_performance_view.sql
+
+Step 6: Execute Stored Procedure
 CALL CALC_SUPPLIER_PERFORMANCE(?);
--- Or execute the procedure in your HANA client and inspect the returned RESULT table
-```
-
-Notes:
-- Adjust schema or data types to match your SAP HANA version if needed.
-- Use your DB client (SAP HANA Studio / Cockpit / DB Explorer) to run these scripts.
-
-## Resume / LinkedIn Copy (Suggested)
-Supplier Performance & Procurement Analytics using SAP HANA
-- Designed an in-memory procurement analytics system using SAP HANA SQL
-- Evaluated supplier delivery delays, cost efficiency, and monthly spend
-- Built analytical views and SQLScript procedures to rank supplier performance
-- Enabled data-driven supplier selection for procurement optimization
-
-## Want to extend this project?
-- Add exported CSVs or connect the view to a lightweight dashboard (Power BI, Grafana)
-- Add SLA breach alerts, lead-time distribution charts, and trend analysis
-- Replace sample data with an anonymized real dataset for demo authenticity
-
----
-If you want, I can also push these changes to GitHub and prepare suggested commit messages.
 
 
+The procedure calculates supplier scores and ranks them based on performance.
+
+Output Metrics
+
+On-time delivery percentage
+
+Total procurement spend per supplier
+
+Monthly spend analysis
+
+Supplier performance score
+
+Supplier ranking
